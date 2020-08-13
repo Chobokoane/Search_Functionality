@@ -1,0 +1,222 @@
+[
+  {
+    "number": 1,
+    "name": "Makro",
+    "category": "Shift",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_Makro",
+    "bannerIcon": "Banner_Makro",
+    "dashboardIcon": "Main_Makro",
+    "cardIcon": "Card_Makro"
+  },
+  {
+    "number": 2,
+    "name": "Medicare Pharmacy",
+    "category": "Shift",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_Medicare",
+    "bannerIcon": "Banner_Medicare",
+    "dashboardIcon": "Main_Medicare",
+    "cardIcon": "Card_Medicare"
+  },
+  {
+    "number": 3,
+    "name": "Meloncino Restaurant",
+    "category": "Shift",
+    "cardType": "Member number",
+    "barcodeType": "N/A",
+    "searchIcon": "Search_Meloncino",
+    "bannerIcon": "Banner_Meloncino",
+    "dashboardIcon": "Main_Meloncino",
+    "cardIcon": "Card_Meloncino"
+  },
+  {
+    "number": 4,
+    "name": "Merrypak",
+    "category": "Shift",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_MerryPak",
+    "bannerIcon": "Banner_Merrypak",
+    "dashboardIcon": "Main_Merrypak",
+    "cardIcon": "Card_Merrypak"
+  },
+  {
+    "number": 5,
+    "name": "Mica Hardware Store",
+    "category": "Shift",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_Mica",
+    "bannerIcon": "Banner_Mica",
+    "dashboardIcon": "Main_Mica",
+    "cardIcon": "Card_Mica"
+  },
+  {
+    "number": 6,
+    "name": "Mike's Kitchen",
+    "category": "Shift",
+    "cardType": "Member number",
+    "barcodeType": "N/A",
+    "searchIcon": "Search_MikesKitchen",
+    "bannerIcon": "Banner_MikesKitchen",
+    "dashboardIcon": "Main_MikesKitchen",
+    "cardIcon": "Card_MikesKitchen"
+  },
+  {
+    "number": 7,
+    "name": "M-Kem Pharmacy",
+    "category": "Shift",
+    "cardType": "Member number",
+    "barcodeType": "N/A",
+    "searchIcon": "Search_Mkem",
+    "bannerIcon": "Banner_Mkem",
+    "dashboardIcon": "Main_Mkem",
+    "cardIcon": "Card_Mkem"
+  },
+  {
+    "number": 8,
+    "name": "Mopani Pharmacy",
+    "category": "Shift",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_MopaniPharmacy",
+    "bannerIcon": "Banner_MopaniPharmacy",
+    "dashboardIcon": "Main_MopaniPharmacy",
+    "cardIcon": "Card_MopaniPharmacy"
+  },
+  {
+    "number": 9,
+    "name": "Mowana Spa",
+    "category": "Shift",
+    "cardType": "Member number",
+    "barcodeType": "N/A",
+    "searchIcon": "Search_MowanaSpa",
+    "bannerIcon": "Banner_MowanaSpa",
+    "dashboardIcon": "Main_MowanaSpa",
+    "cardIcon": "Card_MowanaSpa"
+  },
+  {
+    "number": 10,
+    "name": "Myog Frozen Yoghurt",
+    "category": "Shift",
+    "cardType": "Member number",
+    "barcodeType": "N/A",
+    "searchIcon": "Search_Myog",
+    "bannerIcon": "Banner_Myog",
+    "dashboardIcon": "Main_Myog",
+    "cardIcon": "Card_Myog"
+  },
+  {
+    "number": 11,
+    "name": "MySchool Supporter",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_MySchool",
+    "bannerIcon": "Banner_MySchool",
+    "dashboardIcon": "Main_MySchool",
+    "cardIcon": "Card_MySchool"
+  },
+  {
+    "number": 12,
+    "name": "Nu Metro",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_NuMetro",
+    "bannerIcon": "Banner_NuMetro",
+    "dashboardIcon": "Main_NuMetro",
+    "cardIcon": "Card_NuMetro"
+  },
+  {
+    "number": 13,
+    "name": "OK Foods",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_OK",
+    "bannerIcon": "Banner_OK",
+    "dashboardIcon": "Main_OK",
+    "cardIcon": "Card_OK"
+  },
+  {
+    "number": 14,
+    "name": "Osumo café",
+    "category": "Company",
+    "cardType": "Member number",
+    "barcodeType": "N/A",
+    "searchIcon": "Search_Osumo",
+    "bannerIcon": "Banner_Osumo",
+    "dashboardIcon": "Main_Osumo",
+    "cardIcon": "Card_Osumo"
+  },
+  {
+    "number": 15,
+    "name": "Outdoor Warehouse",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_OutdoorWarehouse",
+    "bannerIcon": "Banner_OutdoorWarehouse",
+    "dashboardIcon": "Main_OutdoorWarehouse",
+    "cardIcon": "Card_OutdoorWarehouse"
+  },
+  {
+    "number": 16,
+    "name": "Panarottis",
+    "category": "Company",
+    "cardType": "QR code & number",
+    "barcodeType": "QR code",
+    "searchIcon": "Search_Panarottis (3)",
+    "bannerIcon": "Banner_Panarottis",
+    "dashboardIcon": "Main_Panarottis",
+    "cardIcon": "Card_Panarottis"
+  },
+  {
+    "number": 17,
+    "name": "PEP",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_PEP",
+    "bannerIcon": "Banner_PEP",
+    "dashboardIcon": "Main_PEP",
+    "cardIcon": "Card_PEP"
+  },
+  {
+    "number": 18,
+    "name": "Pet and Pools",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_Pet&Pools",
+    "bannerIcon": "Banner_Pet&Pools",
+    "dashboardIcon": "Main_Pet&Pools",
+    "cardIcon": "Card_Pet&Pools"
+  },
+  {
+    "number": 19,
+    "name": "Pick n Pay",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_PicknPay",
+    "bannerIcon": "Banner_PicknPay",
+    "dashboardIcon": "Main_PicknPay",
+    "cardIcon": "Card_PicknPay"
+  },
+  {
+    "number": 20,
+    "name": "PNA",
+    "category": "Company",
+    "cardType": "Barcode",
+    "barcodeType": "Code 128",
+    "searchIcon": "Search_PNA",
+    "bannerIcon": "Banner_PNA",
+    "dashboardIcon": "Main_PNA",
+    "cardIcon": "Card_PNA"
+  }
+]
