@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-class ShiftsContentWidget extends StatelessWidget {
+class EmployeesContentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return          Container(
+    // TODO: implement build
+    return    Container(
       padding: EdgeInsets.only(top: 10, bottom: 5),
       width: MediaQuery.of(context).size.width,
       height: 100,
@@ -11,12 +12,11 @@ class ShiftsContentWidget extends StatelessWidget {
         children: <Widget>[
           Container(
             margin: EdgeInsets.all(10),
-            decoration: myBoxDecoration(), //             <--- BoxDecoration here
+            decoration: myBoxDecoration(),
             child: FlatButton(
-
-              child: Text('Employees'),
+              child: Text('Company'),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, 'employeesView');
+                Navigator.pushReplacementNamed(context, 'companyView');
               },
             ),
           ),
@@ -24,9 +24,9 @@ class ShiftsContentWidget extends StatelessWidget {
             margin: EdgeInsets.all(10),
             decoration: myBoxDecoration(),
             child: FlatButton(
-              child: Text('Company'),
+              child: Text('Shifts'),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, 'companyView');
+                Navigator.pushReplacementNamed(context, 'shiftsView');
               },
             ),
           ),
@@ -51,4 +51,3 @@ class ShiftsContentWidget extends StatelessWidget {
     );
   }
 }
-

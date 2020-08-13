@@ -1,83 +1,71 @@
-import 'package:filter/core/model/category.dart';
+import 'package:filter/core/model/category_model.dart';
 import 'package:filter/ui/shared/app_colors.dart';
-import 'package:filter/ui/widgets/CategorySelection.dart';
+import 'package:filter/ui/widgets/category_selection_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class HomeContent extends StatefulWidget {
-  final List<Category> categoryList;
-  final Function(String) onSelection;
-  final Function(String) onTextChange;
-
-  const HomeContent(
-      {Key key, this.categoryList, this.onSelection, this.onTextChange})
-      : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() => SearchFilterWidgetState();
-}
-
-class SearchFilterWidgetState extends State<HomeContent> {
-  final TextEditingController _filter = new TextEditingController();
-  Icon _searchIcon = new Icon(Icons.search, color: primaryColor);
-  String _searchText = "";
-  Widget _categorySelection;
-
-  SearchFilterWidgetState() {
-    _filter.addListener(() {
-      setState(() {
-        _searchText = _filter.text.isEmpty ? "" : _filter.text;
-      });
-      widget.onTextChange(_searchText);
-    });
-  }
-
-  @override
-  void initState() {
-    _categorySelection = CategorySelection(
-        categoryList: widget.categoryList, onSelection: widget.onSelection);
-    super.initState();
-  }
-
+class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return _buildBar(context);
-  }
+    // TODO: implement build
+    return    Container(
+      padding: EdgeInsets.only(top: 10, bottom: 5),
+      width: MediaQuery.of(context).size.width,
+      height: 100,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.all(10),
+            decoration: myBoxDecoration(), //             <--- BoxDecoration here
+            child: FlatButton(
 
-  Widget _buildBar(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-          icon: _searchIcon,
-          //iconSize: 35,
-          onPressed: _searchPressed,
-        ),
-        Expanded(
-          child: _categorySelection,
-        ),
-      ],
+              child: Text('Employees'),
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, 'employeesView');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(10),
+            decoration: myBoxDecoration(),
+            child: FlatButton(
+              child: Text('Company'),
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, 'companyView');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(10),
+            decoration: myBoxDecoration(),
+            child: FlatButton(
+              child: Text('Shifts'),
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, 'shiftsView');
+              },
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.all(10),
+            decoration: myBoxDecoration(),
+            child: FlatButton(
+              child: Text('Branches'),
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, 'branchesView');
+              },
+            ),
+          ),
+          ///add more as you wish
+        ],
+      ),
     );
   }
-
-  void _searchPressed() {
-    setState(() {
-      if (this._searchIcon.icon == Icons.search) {
-        widget.onTextChange("");
-        this._searchIcon = new Icon(Icons.close);
-        this._categorySelection = new TextField(
-          controller: _filter,
-          decoration: new InputDecoration(
-              prefixIcon: new Icon(Icons.search), hintText: 'Search...'),
-        );
-      } else {
-        this._searchIcon = new Icon(Icons.search, color: primaryColor);
-        this._categorySelection = CategorySelection(
-            categoryList: widget.categoryList, onSelection: widget.onSelection);
-        _filter.clear();
-        widget.onTextChange("");
-      }
-    });
+  BoxDecoration myBoxDecoration() {
+    return BoxDecoration(
+      border: Border.all(),
+    );
   }
 }
 

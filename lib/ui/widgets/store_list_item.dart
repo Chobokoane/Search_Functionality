@@ -1,4 +1,5 @@
-import 'package:filter/core/model/store.dart';
+import 'package:filter/core/model/branches_model.dart';
+import 'package:filter/core/model/search_model.dart';
 import 'package:filter/core/shared/core_helpers.dart';
 import 'package:filter/ui/shared/text_styles.dart';
 import 'package:filter/ui/shared/ui_helpers.dart';
@@ -8,8 +9,8 @@ import 'package:flutter/material.dart';
 
 class StoreListItem extends StatelessWidget {
   final Search store;
-
-  const StoreListItem({Key key, this.store}) : super(key: key);
+  final Branches branches;
+  const StoreListItem({Key key, this.store, this.branches}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +29,7 @@ class StoreListItem extends StatelessWidget {
             style: CoreHelpers.getDeviceType() == "IOS" && UIHelper.isLargeAspectRatio(aspectRatio) ? appSubHeaderStyle : textStyle,
           ),
         ),
+
       ],
     );
   }

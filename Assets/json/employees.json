@@ -1,123 +1,57 @@
 [
   {
   "number": 1,
-  "name": "Absolute Pets",
-  "category": "Employees",
-  "cardType": "Barcode",
-  "barcodeType": "Code 128",
-  "searchIcon": "Search_AbsolutePets",
-  "bannerIcon": "Banner_AbsolutePets",
-  "dashboardIcon": "Main_AbsolutePets",
-  "cardIcon": "Card_AbsolutePets"
+  "name": "Tumi",
+  "category": "Employees"
 },
   {
     "number": 2,
     "name": "Benbel",
-    "category": "Employees",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_Benbel",
-    "bannerIcon": "Banner_Benbel",
-    "dashboardIcon": "Main_Benbel",
-    "cardIcon": "Card_Benbel"
+    "category": "Employees"
   },
   {
     "number": 3,
-    "name": "Big Save Supermarket",
-    "category": "Employees",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_BigSave",
-    "bannerIcon": "Banner_BigSave",
-    "dashboardIcon": "Main_BigSave",
-    "cardIcon": "Card_BigSave"
+    "name": "Neo K",
+    "category": "Employees"
   },
   {
     "number": 4,
-    "name": "BRIGHTS Hardware",
-    "category": "Employees",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_Brights",
-    "bannerIcon": "Banner_Brights",
-    "dashboardIcon": "Main_Brights",
-    "cardIcon": "Card_Brights"
+    "name": "Ndivhuwo N",
+    "category": "Employees"
   },
   {
     "number": 5,
-    "name": "Builders Warehouse",
-    "category": "Employees",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_Builders",
-    "bannerIcon": "Banner_Builders",
-    "dashboardIcon": "Main_Builders",
-    "cardIcon": "Card_Builders"
+    "name": "Thomas C",
+    "category": "Employees"
   },
   {
     "number": 6,
-    "name": "Café Gannet Restaurant",
-    "category": "Employees",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_CafeGannet",
-    "bannerIcon": "Banner_CafeGannet",
-    "dashboardIcon": "Main_CafeGannet",
-    "cardIcon": "Card_CafeGannet"
+    "name": "Garreth",
+    "category": "Employees"
   },
   {
     "number": 7,
-    "name": "Cape Town Fish Market",
-    "category": "Employees",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_CapeTownFishMarket",
-    "bannerIcon": "Banner_CapeTownFishMarket",
-    "dashboardIcon": "Main_CapeTownFishMarket",
-    "cardIcon": "Card_CapeTownFishMarket"
+    "name": "Godfrey",
+    "category": "Employees"
   },
   {
     "number": 8,
-    "name": "Checkers",
-    "category": "Employees",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_Checkers",
-    "bannerIcon": "Banner_Checkers",
-    "dashboardIcon": "Main_Checkers",
-    "cardIcon": "Card_Checkers"
+    "name": "Mapuleng",
+    "category": "Employees"
   },
   {
     "number": 9,
-    "name": "Circus Circus Café",
-    "category": "Employees",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_CircusCircus",
-    "bannerIcon": "Banner_CircusCircus",
-    "dashboardIcon": "Main_CircusCircus",
-    "cardIcon": "Card_CircusCircus"
+    "name": "Pelos",
+    "category": "Employees"
   },
   {
     "number": 10,
-    "name": "City of Cape Town Library",
-    "category": "Branches",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_CityofCapeTown",
-    "bannerIcon": "Banner_CityofCapeTown",
-    "dashboardIcon": "Main_CityofCapeTown",
-    "cardIcon": "Card_CityofCapeTown"
+    "name": "Mokoko",
+    "category": "Branches"
   },
   {
     "number": 11,
-    "name": "Clicks",
-    "category": "Employees",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_Clicks",
-    "bannerIcon": "Banner_Clicks",
-    "dashboardIcon": "Main_Clicks",
-    "cardIcon": "Card_Clicks"
+    "name": "Admin",
+    "category": "Employees"
   }
 ]

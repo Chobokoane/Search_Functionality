@@ -2,6 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/repositories/search_repo.dart';
+import 'core/viewmodels/branches_model.dart';
 import 'core/viewmodels/home_model.dart';
 
 
@@ -11,7 +12,7 @@ void setupLocator({SharedPreferences sharedPreferences}) {
   locator.registerLazySingleton(() => sharedPreferences);
   locator.registerFactory(() => HomeModel());
   locator.registerFactory(() => SearchRepo());
-
+  locator.registerFactory(() => BranchesModel());
 
 
 

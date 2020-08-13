@@ -1,24 +1,24 @@
 
 
 
-import 'package:filter/core/model/category.dart';
+import 'package:filter/core/model/category_model.dart';
 import 'package:filter/ui/shared/app_colors.dart';
 import 'package:filter/ui/shared/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class CategorySelection extends StatefulWidget {
+class CategorySelectionWidget extends StatefulWidget {
   final String defaultValue;
   final List<Category> categoryList;
   final Function(String) onSelection;
 
-  const CategorySelection({Key key, this.categoryList, this.onSelection, this.defaultValue = "All"})
+  const CategorySelectionWidget({Key key, this.categoryList, this.onSelection, this.defaultValue = "All"})
       : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => CategorySelectionState();
+  State<StatefulWidget> createState() => CategorySelectionWidgetState();
 }
 
-class CategorySelectionState extends State<CategorySelection> {
+class CategorySelectionWidgetState extends State<CategorySelectionWidget> {
   String currentValue;
 
   @override

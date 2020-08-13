@@ -1,7 +1,7 @@
-import 'package:filter/core/model/category.dart';
+import 'package:filter/core/model/category_model.dart';
 import 'package:filter/core/model/employees_model.dart';
 import 'package:filter/ui/shared/app_colors.dart';
-import 'package:filter/ui/widgets/CategorySelection.dart';
+import 'package:filter/ui/widgets/category_selection_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +36,7 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
 
   @override
   void initState() {
-    _categorySelection = CategorySelection(
+    _categorySelection = CategorySelectionWidget(
         categoryList: widget.categoryList, onSelection: widget.onSelection);
     super.initState();
   }
@@ -66,14 +66,21 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
       if (this._searchIcon.icon == Icons.search) {
         widget.onTextChange("");
         this._searchIcon = new Icon(Icons.close);
-        this._categorySelection = new TextField(
-          controller: _filter,
-          decoration: new InputDecoration(
-              prefixIcon: new Icon(Icons.search), hintText: 'Search...'),
+        this._categorySelection = Container(
+          padding: EdgeInsets.all(12),
+          child: new TextField(
+
+            controller: _filter,
+            decoration: new InputDecoration(
+                prefixIcon: new Icon(Icons.search), hintText: 'Search...',
+              border: OutlineInputBorder(
+
+              ),),
+          ),
         );
       } else {
         this._searchIcon = new Icon(Icons.search, color: primaryColor);
-        this._categorySelection = CategorySelection(
+        this._categorySelection = CategorySelectionWidget(
             categoryList: widget.categoryList, onSelection: widget.onSelection);
         _filter.clear();
         widget.onTextChange("");

@@ -1,123 +1,47 @@
 [
   {
     "number": 1,
-    "name": "Cotton On",
-    "category": "Branches",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_CottonOn&Co",
-    "bannerIcon": "Banner_CottonOn&Co",
-    "dashboardIcon": "Main_CottonOn&Co",
-    "cardIcon": "Card_CottonOn&Co"
+    "name": "All day",
+    "category": "Shifts"
   },
   {
     "number": 2,
-    "name": "Cuba Lounge",
-    "category": "Branches",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_Cuba",
-    "bannerIcon": "Banner_CubaLounge",
-    "dashboardIcon": "Main_CubaLounge",
-    "cardIcon": "Card_CubaLounge"
+    "name": "Night",
+    "category": "Shifts"
   },
   {
     "number": 3,
-    "name": "DC1 Outlet",
-    "category": "Branches",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_DC1Outlet",
-    "bannerIcon": "Banner_DC1Outlet",
-    "dashboardIcon": "Main_DC1Outlet",
-    "cardIcon": "Card_DC1Outlet"
+    "name": "Weekend",
+    "category": "Shifts"
   },
   {
     "number": 4,
-    "name": "Dis-Chem",
-    "category": "Branches",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_Dischem",
-    "bannerIcon": "Banner_Dischem",
-    "dashboardIcon": "Main_Dischem",
-    "cardIcon": "Card_Dischem"
+    "name": "Monday-Friday",
+    "category": "Shifts"
   },
   {
     "number": 5,
-    "name": "Doppio Zero",
-    "category": "Branches",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_DoppioZero",
-    "bannerIcon": "Banner_DoppioZero",
-    "dashboardIcon": "Main_DoppioZero",
-    "cardIcon": "Card_DoppioZero"
+    "name": "Friday-Monday",
+    "category": "Shifts"
   },
   {
     "number": 6,
-    "name": "Edgars Thank U",
-    "category": "Branches",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_Edgars",
-    "bannerIcon": "Banner_Edgars",
-    "dashboardIcon": "Main_Edgars",
-    "cardIcon": "Card_Edgars"
+    "name": "Tuesday-Thurday",
+    "category": "Shifts"
   },
   {
     "number": 7,
-    "name": "Exclusive Books",
-    "category": "Branches",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_ExclusiveBooks",
-    "bannerIcon": "Banner_ExclusiveBooks",
-    "dashboardIcon": "Main_ExclusiveBooks",
-    "cardIcon": "Card_ExclusiveBooks"
+    "name": "All Month",
+    "category": "Shifts"
   },
   {
     "number": 8,
-    "name": "Gooderson Leisure",
-    "category": "Branches",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_GoodersonLeisure",
-    "bannerIcon": "Banner_GoodersonLeisure",
-    "dashboardIcon": "Main_GoodersonLeisure",
-    "cardIcon": "Card_GoodersonLeisure"
+    "name": "All-Day",
+    "category": "Shifts"
   },
   {
     "number": 9,
-    "name": "Hello Tomato",
-    "category": "Branches",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_HelloTomato",
-    "bannerIcon": "Banner_HelloTomato",
-    "dashboardIcon": "Main_HelloTomato",
-    "cardIcon": "Card_HelloTomato"
-  },
-  {
-    "number": 10,
-    "name": "Killarney Country Club",
-    "category": "Branches",
-    "cardType": "Member number",
-    "barcodeType": "N/A",
-    "searchIcon": "Search_KillarneyCountryClub",
-    "bannerIcon": "Banner_KillarneyCountryClub",
-    "dashboardIcon": "Main_KillarneyCountryClub",
-    "cardIcon": "Card_KillarneyCountryClub"
-  },
-  {
-    "number": 11,
-    "name": "Lego Certified Store",
-    "category": "Shift",
-    "cardType": "Barcode",
-    "barcodeType": "Code 128",
-    "searchIcon": "Search_Lego",
-    "bannerIcon": "Banner_Lego",
-    "dashboardIcon": "Main_Lego",
-    "cardIcon": "Card_Lego"
+    "name": "Friday-Wednesday",
+    "category": "Shifts"
   }
 ]

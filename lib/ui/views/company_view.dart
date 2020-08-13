@@ -2,6 +2,7 @@ import 'package:filter/core/enums/viewstate.dart';
 import 'package:filter/core/viewmodels/home_model.dart';
 import 'package:filter/ui/shared/app_colors.dart';
 import 'package:filter/ui/shared/text_styles.dart';
+import 'package:filter/ui/widgets/company_content_widget.dart';
 import 'package:filter/ui/widgets/padded_divider.dart';
 import 'package:filter/ui/widgets/search_filter_widget.dart';
 import 'package:filter/ui/widgets/store_list_item.dart';
@@ -18,27 +19,7 @@ class CompanyView extends StatelessWidget {
         model.getCompanyList();
       },
       builder: (context, model, child) => Scaffold(
-        backgroundColor: widgetBgColor,
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(70),
-          child: Container(
-            alignment: Alignment.bottomLeft,
-            padding: EdgeInsets.only(top: 10),
-            child: AppBar(
-              brightness: Brightness.light,
-              iconTheme: IconThemeData(
-                color: primaryColor, //change your color here
-              ),
-              backgroundColor: widgetBgColor,
-              elevation: 0,
-              title: Text(
-                "Search",
-                style: appHeaderStyle,
-              ),
-              centerTitle: true,
-            ),
-          ),
-        ),
+
         body: Column(
           children: [
             PaddedDivider(
@@ -67,46 +48,7 @@ class CompanyView extends StatelessWidget {
               },
             ),
             Container(
-              padding: EdgeInsets.only(top: 10, bottom: 5),
-              width: MediaQuery.of(context).size.width,
-              height: 100,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    decoration: myBoxDecoration(), //             <--- BoxDecoration here
-                    child: FlatButton(
-
-                      child: Text('Employees'),
-                      onPressed: () {
-                        Navigator.pushReplacementNamed(context, 'employeesView');
-                      },
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    decoration: myBoxDecoration(),
-                    child: FlatButton(
-                      child: Text('Shifts'),
-                      onPressed: () {
-                        Navigator.pushReplacementNamed(context, 'shiftsView');
-                      },
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    decoration: myBoxDecoration(),
-                    child: FlatButton(
-                      child: Text('Branches'),
-                      onPressed: () {
-                        Navigator.pushReplacementNamed(context, 'branchesView');
-                      },
-                    ),
-                  ),
-                  ///add more as you wish
-                ],
-              ),
+              child: CompanyContentWidget(),
             ),
             Expanded(
               child: Column(

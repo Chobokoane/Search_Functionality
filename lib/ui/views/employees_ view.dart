@@ -3,6 +3,7 @@ import 'package:filter/core/viewmodels/home_model.dart';
 import 'package:filter/ui/shared/app_colors.dart';
 import 'package:filter/ui/shared/text_styles.dart';
 import 'package:filter/ui/views/base_view.dart';
+import 'package:filter/ui/widgets/employees_content_widget.dart';
 import 'package:filter/ui/widgets/padded_divider.dart';
 import 'package:filter/ui/widgets/search_filter_widget.dart';
 import 'package:filter/ui/widgets/store_list_item.dart';
@@ -21,27 +22,7 @@ class EmployeesView extends StatelessWidget {
       },
       builder: (context, model, child) =>
           Scaffold(
-            backgroundColor: widgetBgColor,
-            appBar: PreferredSize(
-              preferredSize: Size.fromHeight(70),
-              child: Container(
-                alignment: Alignment.bottomLeft,
-                padding: EdgeInsets.only(top: 10),
-                child: AppBar(
-                  brightness: Brightness.light,
-                  iconTheme: IconThemeData(
-                    color: primaryColor, //change your color here
-                  ),
-                  backgroundColor: widgetBgColor,
-                  elevation: 0,
-                  title: Text(
-                    "Search",
-                    style: appHeaderStyle,
-                  ),
-                  centerTitle: true,
-                ),
-              ),
-            ),
+
             body: Column(
               children: [
                 PaddedDivider(
@@ -68,6 +49,9 @@ class EmployeesView extends StatelessWidget {
                     print("Search Term: $searchTerm");
                     model.searchStores(searchTerm);
                   },
+                ),
+                Container(
+                  child: EmployeesContentWidget(),
                 ),
                 Expanded(
                   child: Column(
