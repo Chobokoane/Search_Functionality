@@ -57,8 +57,8 @@ class HomeView extends StatelessWidget {
               child: Column(
                 children: [
 
-                  model.companyList.isNotEmpty
-                      ? Expanded(
+              model.selectedCategory == "Company" ?
+               Expanded(
                     child: ListView.builder(
                       padding: EdgeInsets.symmetric(vertical: 0),
                       itemCount: model.companyList == null
@@ -77,10 +77,8 @@ class HomeView extends StatelessWidget {
 //                      ),
                     ),
                   )
-                      : Container(),
-
-                  model.shiftsList.isNotEmpty
-                      ? Expanded(
+                      : model.selectedCategory == "Branches" ?  Container()
+                  : Expanded(
                     child: ListView.builder(
                       padding: EdgeInsets.symmetric(vertical: 0),
                       itemCount: model.shiftsList == null
@@ -97,8 +95,7 @@ class HomeView extends StatelessWidget {
 //                            vertical: 0, horizontal: 12),
 //                      ),
                     ),
-                  )
-                      : Container(),
+                  ),
 
 //                  model.branchesList.isNotEmpty
 //                      ? Expanded(

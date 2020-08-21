@@ -23,6 +23,7 @@ class HomeModel extends BaseModel {
   List<ShiftsModel> shiftsList = [];
   List<ShiftsModel> filteredShiftsList = [];
   String searchTerm;
+  String selectedCategory;
 
 
   Future getBranchesList() async {
@@ -150,6 +151,7 @@ class HomeModel extends BaseModel {
   Future companyFilter(String filterCategory) async{
     print("Selected Cat: $filterCategory");
     setState(ViewState.Busy);
+    selectedCategory = filterCategory;
     if(filterCategory.isEmpty ) {
       filteredCompanyList = companyList;
       filteredShiftsList = shiftsList;
