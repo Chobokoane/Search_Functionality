@@ -4,7 +4,7 @@ class PaddedDivider extends StatelessWidget {
   final Color color;
   final EdgeInsets padding;
 
-  PaddedDivider({this.color = const Color(0xffE3E3E3), this.padding = const EdgeInsets.all(8.0)});
+  PaddedDivider({this.color = const Color(0xffE3E3E3), this.padding = const EdgeInsets.all(12.0)});
   @override
   Widget build(BuildContext context) {
     return Padding(
