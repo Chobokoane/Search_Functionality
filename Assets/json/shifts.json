@@ -28,20 +28,24 @@
     "number": 6,
     "name": "Tuesday-Thurday",
     "category": "Shifts"
+
   },
   {
     "number": 7,
-    "name": "All Month",
+    "name": "Weekend",
     "category": "Shifts"
+
   },
   {
     "number": 8,
     "name": "All-Day",
     "category": "Shifts"
+
   },
   {
     "number": 9,
     "name": "Friday-Wednesday",
     "category": "Shifts"
+
   }
 ]

@@ -2,51 +2,51 @@
   {
     "number": 1,
     "name": "Cac",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 2,
     "name": "Medicare Pharmacy",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 3,
     "name": "Meloncino Restaurant",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 4,
     "name": "Merrypak",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 5,
     "name": "Mica Hardware Store",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 6,
     "name": "Mike's Kitchen",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 7,
     "name": "M-Kem Pharmacy",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 8,
     "name": "Makro",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 9,
     "name": "Basadi",
-    "category": "Shift"
+    "category": "Company"
   },
   {
     "number": 10,
     "name": "Deloitte",
-    "category": "Shift"
+    "category": "Company"
   }
 ]

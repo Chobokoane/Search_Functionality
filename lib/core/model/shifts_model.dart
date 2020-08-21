@@ -1,13 +1,16 @@
-class Shifts {
+class ShiftsModel {
   String name;
   DateTime time;
+  String category;
+  String searchIcon;
 
+  ShiftsModel(this.name,this.time,this.category,this.searchIcon);
 
-  Shifts(this.name,this.time);
-
-  Shifts.fromJson(Map<String, dynamic> json) {
+  ShiftsModel.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     time = json['id'];
+    category = json['category'];
+    searchIcon = json['searchIcon'];
   }
 
   Map<String, dynamic> toJson() {
@@ -17,6 +20,12 @@ class Shifts {
     }
     if (this.time != null) {
       data['id'] = this.time;
+    }
+    if (this.category != null) {
+      data['category'] = this.category;
+    }
+    if (this.searchIcon != null) {
+      data['searchIcon'] = this.searchIcon;
     }
 
 

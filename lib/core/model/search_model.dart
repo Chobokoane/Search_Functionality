@@ -1,15 +1,12 @@
-import 'package:filter/core/shared/date_formats.dart';
-
-
-class Search {
+class CompanyModel {
   String id;
   String name;
   String searchIcon;
   String category;
 
-  Search(this.id, this.name, this.searchIcon, this.category,cards, created);
+  CompanyModel(this.id, this.name, this.searchIcon, this.category,cards, created);
 
-  Search.fromJson(Map<String, dynamic> json) {
+  CompanyModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
     searchIcon = json['searchIcon'];

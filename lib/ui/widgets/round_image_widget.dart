@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class RoundImage extends StatelessWidget {
+class RoundImageWidget extends StatelessWidget {
   final double marginTop;
   final Color backgroundColor;
   final String path;
   final bool network;
   final double height;
 
-  const RoundImage(
+  const RoundImageWidget(
       {Key key,
       this.marginTop = 20.0,
       this.backgroundColor = Colors.transparent,

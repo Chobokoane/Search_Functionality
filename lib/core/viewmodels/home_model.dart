@@ -1,79 +1,45 @@
 import 'package:filter/core/enums/viewstate.dart';
+import 'package:filter/core/model/branches_model.dart';
 import 'package:filter/core/model/search_model.dart';
 import 'package:filter/core/model/category_model.dart';
+import 'package:filter/core/model/shifts_model.dart';
 import 'package:filter/core/repositories/search_repo.dart';
-
-
 import '../../locator.dart';
 import 'base_model.dart';
 
 class HomeModel extends BaseModel {
-  final SearchRepo _storeRepo = locator<SearchRepo>();
+
+  List<CategoryModel> categoryList = [];
+
+  List<CompanyModel> companyList = [];
+  List<CompanyModel> filteredCompanyList = [];
+
+  final SearchRepo _searchRepo = locator<SearchRepo>();
   String errorMessage;
-  List<Category> categoryList = [];
-  List<Search> searchList = [];
-  List<Search> filteredStoreList = [];
+
+  List<BranchesModel> branchesList = [];
+  List<BranchesModel> filteredBranchesList = [];
+
+  List<ShiftsModel> shiftsList = [];
+  List<ShiftsModel> filteredShiftsList = [];
   String searchTerm;
 
-  void init(Function onCompleteCountDown) {
-    setState(ViewState.Busy);
-    Future.delayed(const Duration(seconds: 2)).then((any) {
-      setState(ViewState.Idle);
-      onCompleteCountDown();
-    });
-  }
-  Future getCategoryList() async {
-    setState(ViewState.Busy);
-    errorMessage = null;
-    categoryList = [];
-    _storeRepo.getCategory()
-        .then((categories) {
-      this.categoryList = [Category(id: -1,name: "All")];
-      this.categoryList.addAll(categories);
-      setState(ViewState.Idle);
-      return getAllStores();
-    }).catchError((error) {
-      errorMessage = '${error.toString()}';
-      setState(ViewState.Idle);
-    });
-  }
-  Future getEmployeesList() async {
-    setState(ViewState.Busy);
-    errorMessage = null;
-    searchList = [];
-    filteredStoreList = [];
-    _storeRepo.getEmployeesList()
-        .then((stores) {
-      if (stores != null) {
-        this.searchList = stores;
-        this.filteredStoreList = stores;
-        if (stores.isEmpty) {
-          errorMessage = "No Stores Found";
-        }
-      } else {
-        errorMessage = "Failed to load Stores";
-      }
-      setState(ViewState.Idle);
-    }).catchError((error) {
-      errorMessage = '${error.toString()}';
-      setState(ViewState.Idle);
-    });
-  }
+
   Future getBranchesList() async {
     setState(ViewState.Busy);
     errorMessage = null;
-    searchList = [];
-    filteredStoreList = [];
-    _storeRepo.getBranchesList()
-        .then((stores) {
-      if (stores != null) {
-        this.searchList = stores;
-        this.filteredStoreList = stores;
-        if (stores.isEmpty) {
-          errorMessage = "No Stores Found";
+    branchesList = [];
+    filteredBranchesList = [];
+    _searchRepo.getBranchesList()
+        .then((branches) {
+      if (branches != null) {
+        this.branchesList = branches;
+        this.filteredBranchesList = branches;
+        if (branches.isEmpty) {
+          errorMessage = "No Branches Found";
         }
       } else {
-        errorMessage = "Failed to load Stores";
+        errorMessage = "Failed to load Branches";
       }
       setState(ViewState.Idle);
     }).catchError((error) {
@@ -84,15 +50,15 @@ class HomeModel extends BaseModel {
   Future getShiftList() async {
     setState(ViewState.Busy);
     errorMessage = null;
-    searchList = [];
-    filteredStoreList = [];
-    _storeRepo.getShiftsList()
-        .then((stores) {
-      if (stores != null) {
-        this.searchList = stores;
-        this.filteredStoreList = stores;
-        if (stores.isEmpty) {
-          errorMessage = "No Stores Found";
+    shiftsList = [];
+    filteredShiftsList = [];
+    _searchRepo.getShiftsList()
+        .then((shifts) {
+      if (shifts != null) {
+        this.shiftsList = shifts;
+        this.filteredShiftsList = shifts;
+        if (shifts.isEmpty) {
+          errorMessage = "No Shifts Found";
         }
       } else {
         errorMessage = "Failed to load Stores";
@@ -106,80 +72,111 @@ class HomeModel extends BaseModel {
   Future getCompanyList() async {
     setState(ViewState.Busy);
     errorMessage = null;
-    searchList = [];
-    filteredStoreList = [];
-    _storeRepo.getCompanyList()
-        .then((stores) {
-      if (stores != null) {
-        this.searchList = stores;
-        this.filteredStoreList = stores;
-        if (stores.isEmpty) {
-          errorMessage = "No Stores Found";
+    companyList = [];
+    filteredCompanyList = [];
+    _searchRepo.getCompanyList()
+        .then((company) {
+      if (company != null) {
+
+        this.companyList = company;
+        this.filteredCompanyList = company;
+        if (company.isEmpty) {
+          errorMessage = "No Company Found";
         }
       } else {
-        errorMessage = "Failed to load Stores";
+        errorMessage = "Failed to load Company";
       }
       setState(ViewState.Idle);
     }).catchError((error) {
       errorMessage = '${error.toString()}';
       setState(ViewState.Idle);
     });
+
   }
 
-  Future getAllStores() async {
+
+  Future getCategories() async {
     setState(ViewState.Busy);
     errorMessage = null;
-    searchList = [];
-    filteredStoreList = [];
-    _storeRepo.getStoreList()
-        .then((stores) {
-      if (stores != null) {
-        this.searchList = stores;
-        this.filteredStoreList = stores;
-        if (stores.isEmpty) {
-          errorMessage = "No Stores Found";
-        }
-      } else {
-        errorMessage = "Failed to load Stores";
-      }
+    categoryList = [];
+    _searchRepo.getCategoryList()
+        .then((categories) {
+      this.categoryList.addAll(categories);
       setState(ViewState.Idle);
+       getShiftList();
+      getCompanyList();
+      getBranchesList();
+
     }).catchError((error) {
       errorMessage = '${error.toString()}';
       setState(ViewState.Idle);
     });
   }
 
-  Future searchStores(String searchTerm) async{
+
+  Future companySearch(String searchTerm) async{
     setState(ViewState.Busy);
     if(searchTerm.isEmpty) {
-      filteredStoreList = searchList;
+      filteredCompanyList = companyList;
+      filteredShiftsList = shiftsList;
+      filteredBranchesList = branchesList;
     } else {
-      List tempList = new List<Search>();
-      for (int i = 0; i < searchList.length; i++) {
-        if (searchList[i].name.toLowerCase().contains(searchTerm.toLowerCase())) {
-          tempList.add(searchList[i]);
+      List tempCompanyList = new List<CompanyModel>();
+      List tempShiftList = new List<ShiftsModel>();
+      List tempBranchestList = new List<BranchesModel>();
+      for (int i = 0; i < branchesList.length; i++) {
+        if (branchesList[i].name.toLowerCase().contains(searchTerm.toLowerCase())) {
+          tempBranchestList.add(branchesList[i]);
         }
       }
-      filteredStoreList = tempList;
+      for (int i = 0; i < companyList.length; i++) {
+        if (companyList[i].name.toLowerCase().contains(searchTerm.toLowerCase())) {
+          tempCompanyList.add(companyList[i]);
+        }
+      }
+      for (int i = 0; i < shiftsList.length; i++) {
+        if (shiftsList[i].name.toLowerCase().contains(searchTerm.toLowerCase())) {
+          tempShiftList.add(shiftsList[i]);
+        }
+      }
+      filteredShiftsList = tempShiftList;
+      filteredCompanyList = tempCompanyList;
+      filteredBranchesList = tempBranchestList;
     }
     this.searchTerm = searchTerm;
     setState(ViewState.Idle);
   }
 
-  Future filterStores(String filterCategory) async{
+  Future companyFilter(String filterCategory) async{
     print("Selected Cat: $filterCategory");
     setState(ViewState.Busy);
-    if(filterCategory.isEmpty || filterCategory == "All") {
-      filteredStoreList = searchList;
+    if(filterCategory.isEmpty ) {
+      filteredCompanyList = companyList;
+      filteredShiftsList = shiftsList;
+      filteredBranchesList = branchesList;
     } else {
-      List tempList = new List<Search>();
-      for (int i = 0; i < searchList.length; i++) {
-        if (searchList[i].category.toLowerCase() == filterCategory.toLowerCase()) {
-          tempList.add(searchList[i]);
+      List tempCompanyList = new List<CompanyModel>();
+      List tempShiftList = new List<ShiftsModel>();
+      List tempBranchesList = new List<BranchesModel>();
+
+      for (int i = 0; i < branchesList.length; i++) {
+        if (branchesList[i].category.toLowerCase() == filterCategory.toLowerCase()) {
+          tempBranchesList.add(branchesList[i]);
         }
       }
-      filteredStoreList = tempList;
+      for (int i = 0; i < companyList.length; i++) {
+        if (companyList[i].category.toLowerCase() == filterCategory.toLowerCase()) {
+          tempCompanyList.add(companyList[i]);
+        }
+      }
+      for (int i = 0; i < shiftsList.length; i++) {
+        if (shiftsList[i].category.toLowerCase() == filterCategory.toLowerCase()) {
+          tempShiftList.add(shiftsList[i]);
+        }
+      }
+      filteredShiftsList = tempShiftList;
+      filteredCompanyList = tempCompanyList;
+      filteredBranchesList = tempBranchesList;
     }
     setState(ViewState.Idle);
-  }
-}
+  }}

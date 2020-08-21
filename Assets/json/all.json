@@ -93,27 +93,27 @@
   {
     "number": 19,
     "name": "Tumi",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 20,
     "name": "Benbel",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 21,
     "name": "Neo K",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 22,
     "name": "Ndivhuwo N",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 23,
     "name": "Thomas C",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 24,
@@ -123,17 +123,17 @@
   {
     "number": 25,
     "name": "Godfrey",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 26,
     "name": "Mapuleng",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 27,
     "name": "Pelos",
-    "category": "Employees"
+    "category": "Company"
   },
   {
     "number": 28,
@@ -143,7 +143,7 @@
   {
     "number": 29,
     "name": "Admin",
-    "category": "Employees"
+    "category": "Company"
   }
 
 ]

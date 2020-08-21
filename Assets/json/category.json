@@ -1,19 +1,17 @@
 [
   {
-    "id": 0,
-    "name": "Employees"
+    "id": 1,
+    "name": "Company"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "Branches"
   },
+
   {
-    "id": 2,
-    "name": "Shift"
-  },
-  {
-    "id": 2,
-    "name": "Company"
+    "id": 3,
+    "name": "Shifts"
   }
+
 
 ]

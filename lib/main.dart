@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:filter/router.dart';
+import 'package:filter/my_router.dart';
 import 'package:filter/ui/shared/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
           primaryColor: primaryColor
       ),
-      onGenerateRoute: Router.generateRoute,
+      onGenerateRoute: My_Router.generateRoute,
     );
   }
 }

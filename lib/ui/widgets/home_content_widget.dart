@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class HomeContent extends StatelessWidget {
+class HomeContentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -16,17 +16,6 @@ class HomeContent extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(10),
-            decoration: myBoxDecoration(), //             <--- BoxDecoration here
-            child: FlatButton(
-
-              child: Text('Employees'),
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, 'employeesView');
-              },
-            ),
-          ),
           Container(
             margin: EdgeInsets.all(10),
             decoration: myBoxDecoration(),
@@ -53,7 +42,7 @@ class HomeContent extends StatelessWidget {
             child: FlatButton(
               child: Text('Branches'),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, 'branchesView');
+                Navigator.pushReplacementNamed(context, 'homeView');
               },
             ),
           ),
