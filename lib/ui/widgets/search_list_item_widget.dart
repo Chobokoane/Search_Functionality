@@ -8,10 +8,10 @@ import 'package:filter/ui/widgets/round_image_widget.dart';
 import 'package:flutter/material.dart';
 
 
-class SearchListItemWidget extends StatelessWidget {
+class CompanyListItemWidget extends StatelessWidget {
   final CompanyModel company;
 
-  const SearchListItemWidget({Key key, this.company}) : super(key: key);
+  const CompanyListItemWidget({Key key, this.company}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

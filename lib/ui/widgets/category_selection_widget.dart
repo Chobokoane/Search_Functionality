@@ -8,7 +8,7 @@ class CategorySelectionWidget extends StatefulWidget {
   final List<CategoryModel> categoryList;
   final Function(String) onSelection;
 
-  const CategorySelectionWidget({Key key, this.categoryList, this.onSelection, this.defaultValue = "All"})
+  const CategorySelectionWidget({Key key, this.categoryList, this.onSelection, this.defaultValue = "Company"})
       : super(key: key);
 
   @override
@@ -30,9 +30,9 @@ class CategorySelectionState extends State<CategorySelectionWidget> {
 
     widget.categoryList.forEach((category) {
       categoryChoices.add(Container(
-        padding: EdgeInsets.all(5.0),
+        padding: EdgeInsets.all(8.0),
         child: ChoiceChip(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(8),),),
           labelPadding: EdgeInsets.symmetric(horizontal: 5, vertical: 2),
           label: Text(category.name, style: currentValue == category.name ? textStyleWhite : textStyle,),
           backgroundColor: widgetBgColor,

@@ -44,22 +44,31 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return _buildBar(context);
-  }
+  return Column(
+    children: [
+      Row(
+        children: [
+          Container(
+            width: 30,
+            child: IconButton(
+              icon: _searchIcon,
+              //iconSize: 35,
+              onPressed: _searchPressed,
+            ),
+          ),
+        ],
+      ),
+      Row(
+          children: [
 
-  Widget _buildBar(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-          icon: _searchIcon,
-          //iconSize: 35,
-          onPressed: _searchPressed,
+            Expanded(
+              flex: 1,
+              child: _categorySelection,
+            ),
+          ],
         ),
-        Expanded(
-          child: _categorySelection,
-        ),
-      ],
-    );
+    ],
+  );
   }
 
   void _searchPressed() {
@@ -70,7 +79,7 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
         this._categorySelection = new TextField(
           controller: _filter,
           decoration: new InputDecoration(
-              prefixIcon: new Icon(Icons.search), hintText: 'Search...'),
+              prefixIcon: new Icon(Icons.search), hintText: 'Search...', border: OutlineInputBorder(),),
         );
       } else {
         this._searchIcon = new Icon(Icons.search, color: primaryColor);

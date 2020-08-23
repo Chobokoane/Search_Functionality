@@ -102,6 +102,7 @@ class HomeModel extends BaseModel {
     categoryList = [];
     _searchRepo.getCategoryList()
         .then((categories) {
+      //this.categoryList = [CategoryModel(name: "Company")];
       this.categoryList.addAll(categories);
       setState(ViewState.Idle);
        getShiftList();
@@ -119,8 +120,8 @@ class HomeModel extends BaseModel {
     setState(ViewState.Busy);
     if(searchTerm.isEmpty) {
       filteredCompanyList = companyList;
-      filteredShiftsList = shiftsList;
-      filteredBranchesList = branchesList;
+//      filteredShiftsList = shiftsList;
+//      filteredBranchesList = branchesList;
     } else {
       List tempCompanyList = new List<CompanyModel>();
       List tempShiftList = new List<ShiftsModel>();
@@ -154,8 +155,8 @@ class HomeModel extends BaseModel {
     selectedCategory = filterCategory;
     if(filterCategory.isEmpty ) {
       filteredCompanyList = companyList;
-      filteredShiftsList = shiftsList;
-      filteredBranchesList = branchesList;
+//      filteredShiftsList = shiftsList;
+//      filteredBranchesList = branchesList;
     } else {
       List tempCompanyList = new List<CompanyModel>();
       List tempShiftList = new List<ShiftsModel>();
