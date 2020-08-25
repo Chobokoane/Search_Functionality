@@ -48,13 +48,10 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
     children: [
       Row(
         children: [
-          Container(
-            width: 30,
-            child: IconButton(
-              icon: _searchIcon,
-              //iconSize: 35,
-              onPressed: _searchPressed,
-            ),
+          IconButton(
+            icon: _searchIcon,
+            //iconSize: 35,
+            onPressed: _searchPressed,
           ),
         ],
       ),
@@ -62,7 +59,6 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
           children: [
 
             Expanded(
-              flex: 1,
               child: _categorySelection,
             ),
           ],
