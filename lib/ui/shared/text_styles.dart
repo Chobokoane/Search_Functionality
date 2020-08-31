@@ -43,3 +43,4 @@ const labelStyleBold = TextStyle(fontSize: 16.0, fontWeight: FontWeight.w700, co
 const labelStyleBoldLight = TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600, color: textColorBlack);
 const normalText = TextStyle(fontSize: 24.0, color: Colors.black54);
 const entryStyles = TextStyle(fontSize: 14.0, color:Color(0xFF1565C0));
+const textStyles = TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: textColorGrey);

@@ -2,7 +2,8 @@ import 'dart:convert';
 
 import 'package:filter/core/model/branches_model.dart';
 import 'package:filter/core/model/category_model.dart';
-import 'package:filter/core/model/search_model.dart';
+import 'package:filter/core/model/company_model.dart';
+import 'package:filter/core/model/location_model.dart';
 import 'package:filter/core/model/shifts_model.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -37,5 +38,9 @@ class SearchRepo {
   Future<List<CompanyModel>>  getCompanyList() async {
     String companyJson = await parseJsonFromAssets("assets/json/company.json");
     return (json.decode(companyJson) as List).map((data) => CompanyModel.fromJson(data)).toList();
+  }
+  Future<List<LocationModel>>  getLocationList() async {
+    String locationJson = await parseJsonFromAssets("assets/json/location.json");
+    return (json.decode(locationJson) as List).map((data) => LocationModel.fromJson(data)).toList();
   }
 }

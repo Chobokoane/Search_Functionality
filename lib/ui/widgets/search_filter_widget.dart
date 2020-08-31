@@ -46,23 +46,34 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
   Widget build(BuildContext context) {
   return Column(
     children: [
+      Container(
+        padding: const EdgeInsets.all(8.0),
+        alignment: Alignment.center,
+        height: 60.0,
+        decoration: new BoxDecoration(
+            color: Colors.grey[400],
+            borderRadius: new BorderRadius.circular(50.0)
+        ),
+        child: new TextField(
+          controller: _filter,
+
+          decoration: InputDecoration(
+
+              hintText: "Search Here",
+              suffixIcon: Icon(Icons.search,color: Colors.white,size: 20,),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(40.0)))),
+        ),
+      ),
       Row(
         children: [
-          IconButton(
-            icon: _searchIcon,
-            //iconSize: 35,
-            onPressed: _searchPressed,
+
+          Expanded(
+            child: _categorySelection,
           ),
         ],
       ),
-      Row(
-          children: [
 
-            Expanded(
-              child: _categorySelection,
-            ),
-          ],
-        ),
     ],
   );
   }
@@ -75,7 +86,8 @@ class SearchFilterWidgetState extends State<SearchFilterWidget> {
         this._categorySelection = new TextField(
           controller: _filter,
           decoration: new InputDecoration(
-              prefixIcon: new Icon(Icons.search), hintText: 'Search...', border: OutlineInputBorder(),),
+
+              suffixIcon: new Icon(Icons.search), hintText: 'Search...', border: OutlineInputBorder(),),
         );
       } else {
         this._searchIcon = new Icon(Icons.search, color: primaryColor);

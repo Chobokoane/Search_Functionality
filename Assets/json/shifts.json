@@ -1,51 +1,84 @@
 [
   {
     "number": 1,
-    "name": "All day",
-    "category": "Shifts"
+    "name": "Cac",
+    "branchName": "Johannesburg",
+    "description": "Bookeeping making sure all the books are up to date",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 2,
-    "name": "Night",
-    "category": "Shifts"
+    "name": "Medicare Pharmacy",
+    "branchName": "Johannesburg",
+    "description": "Bookeeping making sure all the books are up to date",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 3,
-    "name": "Weekend",
-    "category": "Shifts"
+    "name": "Meloncino Restaurant",
+    "branchName": "Johannesburg",
+    "description": "Bookeeping making sure all the books are up to date",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 4,
-    "name": "Monday-Friday",
-    "category": "Shifts"
+    "name": "Merrypak",
+    "branchName": "Johannesburg",
+    "description": "Bookeeping making sure all the books are up to date",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 5,
-    "name": "Friday-Monday",
-    "category": "Shifts"
+    "name": "Mica Hardware Store",
+    "category": "Shifts",
+    "branchName": "Johannesburg",
+    "description": "Bookeeping making sure all the books are up to date",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 6,
-    "name": "Tuesday-Thurday",
-    "category": "Shifts"
-
+    "name": "Mike's Kitchen",
+    "branchName": "Johannesburg",
+    "description": "Bookeeping making sure all the books are up to date",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 7,
-    "name": "Weekend",
-    "category": "Shifts"
-
+    "name": "M-Kem Pharmacy",
+    "branchName": "Pretoria",
+    "description": "Taking orders from different supplies ",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 8,
-    "name": "All-Day",
-    "category": "Shifts"
-
+    "name": "Makro",
+    "branchName": "Bloemfontein",
+    "description": "Supervisor to oversee every general worker they are doing their job",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 9,
-    "name": "Friday-Wednesday",
-    "category": "Shifts"
-
+    "name": "Basadi",
+    "branchName": "Boksburg",
+    "description": "Fixing all the refrigerator from our clients",
+    "category": "Shifts",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   }
+
 ]

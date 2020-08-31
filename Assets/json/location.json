@@ -4,7 +4,7 @@
     "name": "Cac",
     "branchName": "Johannesburg",
     "description": "Bookeeping making sure all the books are up to date",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   },
@@ -13,7 +13,7 @@
     "name": "Medicare Pharmacy",
     "branchName": "Johannesburg",
     "description": "Bookeeping making sure all the books are up to date",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   },
@@ -22,7 +22,7 @@
     "name": "Meloncino Restaurant",
     "branchName": "Johannesburg",
     "description": "Bookeeping making sure all the books are up to date",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   },
@@ -31,14 +31,14 @@
     "name": "Merrypak",
     "branchName": "Johannesburg",
     "description": "Bookeeping making sure all the books are up to date",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   },
   {
     "number": 5,
     "name": "Mica Hardware Store",
-    "category": "Branches",
+    "category": "Location",
     "branchName": "Johannesburg",
     "description": "Bookeeping making sure all the books are up to date",
     "location": "Eastern Cape",
@@ -49,7 +49,7 @@
     "name": "Mike's Kitchen",
     "branchName": "Johannesburg",
     "description": "Bookeeping making sure all the books are up to date",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   },
@@ -58,7 +58,7 @@
     "name": "M-Kem Pharmacy",
     "branchName": "Pretoria",
     "description": "Taking orders from different supplies ",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   },
@@ -67,7 +67,7 @@
     "name": "Makro",
     "branchName": "Bloemfontein",
     "description": "Supervisor to oversee every general worker they are doing their job",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   },
@@ -76,7 +76,7 @@
     "name": "Basadi",
     "branchName": "Boksburg",
     "description": "Fixing all the refrigerator from our clients",
-    "category": "Branches",
+    "category": "Location",
     "location": "Eastern Cape",
     "shiftNumber": "72"
   }

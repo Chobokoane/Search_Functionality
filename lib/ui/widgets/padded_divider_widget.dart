@@ -11,7 +11,7 @@ class PaddedDividerWidget extends StatelessWidget {
 
       padding: padding,
       child: Divider(
-        height:1.5,
+        height:0.5,
       ),
     );
   }

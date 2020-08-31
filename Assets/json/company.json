@@ -2,51 +2,83 @@
   {
     "number": 1,
     "name": "Cac",
-    "category": "Company"
+    "category": "Company",
+    "description": "Making sure that all projects are met in due date",
+    "branchName": "Botshabelo",
+    "location": "Pretoria",
+    "shiftNumber": "72"
   },
   {
     "number": 2,
     "name": "Medicare Pharmacy",
-    "category": "Company"
+    "category": "Company",
+    "description": "Answer all calls and direct them to relevant person",
+    "branchName": "Jo'burg",
+    "location": "Pretoria",
+    "shiftNumber": "Botshabelo"
   },
   {
     "number": 3,
     "name": "Meloncino Restaurant",
-    "category": "Company"
+    "category": "Company",
+    "description": "Outsourcing talent from other companies and higher institution ",
+    "branchName": "Jo'burg",
+    "location": "Pretoria",
+    "shiftNumber": "72"
   },
   {
     "number": 4,
     "name": "Merrypak",
-    "category": "Company"
+    "category": "Company",
+    "description": "Making sure that all projects are met in due date",
+    "branchName": "Jo'burg",
+    "location": "Gauteng",
+    "shiftNumber": "72"
   },
   {
     "number": 5,
     "name": "Mica Hardware Store",
-    "category": "Company"
+    "category": "Company",
+    "description": "Making sure that all projects are met in due date",
+    "branchName": "Jo'burg",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 6,
     "name": "Mike's Kitchen",
-    "category": "Company"
+    "branchName": "Johannesburg",
+    "description": "Bookeeping making sure all the books are up to date",
+    "category": "Company",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 7,
     "name": "M-Kem Pharmacy",
-    "category": "Company"
+    "branchName": "Pretoria",
+    "description": "Taking orders from different supplies ",
+    "category": "Company",
+    "location": "Tembisa",
+    "shiftNumber": "72"
   },
   {
     "number": 8,
     "name": "Makro",
-    "category": "Company"
+    "branchName": "Bloemfontein",
+    "description": "Supervisor to oversee every general worker they are doing their job",
+    "category": "Company",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   },
   {
     "number": 9,
     "name": "Basadi",
-    "category": "Company"
-  },
-  {
-    "number": 10,
-    "name": "Deloitte",
-    "category": "Company"
+    "branchName": "Boksburg",
+    "description": "Fixing all the refrigerator from our clients",
+    "category": "Company",
+    "location": "Eastern Cape",
+    "shiftNumber": "72"
   }
+
 ]

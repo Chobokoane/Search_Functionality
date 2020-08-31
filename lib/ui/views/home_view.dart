@@ -1,6 +1,8 @@
 import 'package:filter/core/enums/viewstate.dart';
 import 'package:filter/core/viewmodels/home_model.dart';
+import 'package:filter/ui/shared/text_styles.dart';
 import 'package:filter/ui/widgets/branches_list_item_widget.dart';
+import 'package:filter/ui/widgets/location_list_item_widget.dart';
 import 'package:filter/ui/widgets/padded_divider_widget.dart';
 import 'package:filter/ui/widgets/search_filter_widget.dart';
 import 'package:filter/ui/widgets/search_list_item_widget.dart';
@@ -61,78 +63,198 @@ class HomeView extends StatelessWidget {
                             itemCount: model.companyList == null
                                 ? 0
                                 : model.filteredCompanyList.length,
+
                             itemBuilder: (BuildContext context, int index) {
-                              return new ListTile(
-                                title: CompanyListItemWidget(
-                                  company: model.filteredCompanyList[index],
+                             return new  ListTile(
+
+                                title:  Column (
+
+                                  children: [
+                                    Text("${model.filteredCompanyList[index].name} - ${model.filteredCompanyList[index].branchName} ${model.filteredCompanyList[index].description}",style: textStyle,),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Icon(Icons.location_on,color: Colors.grey,),
+                                          Text("${model.filteredCompanyList[index].location}",style: textStyle,),
+                                          Text("Shift: ${model.filteredCompanyList[index].shiftNumber}",style: textStyle,),
+                                         FlatButton(
+                                             shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(12.0),
+                                          ),
+                                           color: Colors.grey,
+                                              child: Text("Read More",style: textStyleWhite,),
+                                              onPressed: (){},
+                                            ),
+
+
+                                        ]
+                                    )
+                                  ],
                                 ),
+
                               );
                             },
                           ),
                         )
                       : model.selectedCategory == "Shifts"
-                          ? Expanded(
-                              child: ListView.builder(
-                                padding: EdgeInsets.symmetric(vertical: 0),
-                                itemCount: model.shiftsList == null
-                                    ? 0
-                                    : model.filteredShiftsList.length,
-                                itemBuilder: (BuildContext context, int index) {
-                                  return new ListTile(
-                                    title: ShiftListItemWidget(
-                                      shifts: model.filteredShiftsList[index],
+                      ? Expanded(
+                    child: ListView.builder(
+                      padding: EdgeInsets.symmetric(vertical: 0),
+                      itemCount: model.shiftsList == null
+                          ? 0
+                          : model.filteredShiftsList.length,
+
+                      itemBuilder: (BuildContext context, int index) {
+                        return new  ListTile(
+
+                          title:  Column (
+
+                            children: [
+                              Text("${model.filteredShiftsList[index].name} - ${model.filteredShiftsList[index].branchName} ${model.filteredShiftsList[index].description}",style: textStyle,),
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Icon(Icons.location_on,color: Colors.grey,),
+                                    Text("${model.filteredShiftsList[index].location}",style: textStyle,),
+                                    Text("Shift: ${model.filteredShiftsList[index].shiftNumber}",style: textStyle,),
+                                    FlatButton(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12.0),
+                                      ),
+                                      color: Colors.grey,
+                                      child: Text("Read More",style: textStyleWhite,),
+                                      onPressed: (){},
                                     ),
-                                  );
-                                },
-                              ),
-                            )
+
+
+                                  ]
+                              )
+                            ],
+                          ),
+
+                        );
+                      },
+                    ),
+                  )
                           : model.selectedCategory == "Branches"
-                              ? Expanded(
-                                  child: ListView.separated(
-                                    padding: EdgeInsets.symmetric(vertical: 0),
-                                    itemCount: model.branchesList == null
-                                        ? 0
-                                        : model.filteredBranchesList.length,
-                                    itemBuilder:
-                                        (BuildContext context, int index) {
-                                      return new ListTile(
-                                        title: BranchesListItemWidget(
-                                          branches:
-                                              model.filteredBranchesList[index],
-                                        ),
-                                      );
-                                    },
-                                    separatorBuilder: (context, index) =>
-                                        PaddedDividerWidget(
-                                      color: Colors.black45,
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 0, horizontal: 12),
+                      ? Expanded(
+                    child: ListView.builder(
+                      padding: EdgeInsets.symmetric(vertical: 0),
+                      itemCount: model.branchesList == null
+                          ? 0
+                          : model.filteredBranchesList.length,
+
+                      itemBuilder: (BuildContext context, int index) {
+                        return new  ListTile(
+
+                          title:  Column (
+
+                            children: [
+                              Text("${model.filteredBranchesList[index].name} - ${model.filteredBranchesList[index].branchName} ${model.filteredBranchesList[index].description}",style: textStyle,),
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Icon(Icons.location_on,color: Colors.grey,),
+                                    Text("${model.filteredBranchesList[index].location}",style: textStyle,),
+                                    Text("Shift: ${model.filteredBranchesList[index].shiftNumber}",style: textStyle,),
+                                    FlatButton(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12.0),
+                                      ),
+                                      color: Colors.grey,
+                                      child: Text("Read More",style: textStyleWhite,),
+                                      onPressed: (){},
                                     ),
-                                  ),
-                                )
-                              : //                  model.branchesList.isNotEmpty
-                              Expanded(
-                                  child: ListView.separated(
-                                    padding: EdgeInsets.symmetric(vertical: 0),
-                                    itemCount: model.companyList == null
-                                        ? 0
-                                        : model.filteredCompanyList.length,
-                                    itemBuilder:
-                                        (BuildContext context, int index) {
-                                      return new ListTile(
-                                        title: CompanyListItemWidget(
-                                          company: model.filteredCompanyList[index],
-                                        ),
-                                      );
-                                    },
-                                    separatorBuilder: (context, index) =>
-                                        PaddedDividerWidget(
-                                      color: Colors.black45,
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 0, horizontal: 12),
+
+
+                                  ]
+                              )
+                            ],
+                          ),
+
+                        );
+                      },
+                    ),
+                  )
+                              :  model.selectedCategory == "Location"
+                      ? Expanded(
+                    child: ListView.builder(
+                      padding: EdgeInsets.symmetric(vertical: 0),
+                      itemCount: model.locationList == null
+                          ? 0
+                          : model.filteredLocationList.length,
+
+                      itemBuilder: (BuildContext context, int index) {
+                        return new  ListTile(
+
+                          title:  Column (
+
+                            children: [
+                              Text("${model.filteredLocationList[index].name} - ${model.filteredLocationList[index].branchName} ${model.filteredLocationList[index].description}",style: textStyle,),
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Icon(Icons.location_on,color: Colors.grey,),
+                                    Text("${model.filteredLocationList[index].location}",style: textStyle,),
+                                    Text("Shift: ${model.filteredLocationList[index].shiftNumber}",style: textStyle,),
+                                    FlatButton(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(12.0),
+                                      ),
+                                      color: Colors.grey,
+                                      child: Text("Read More",style: textStyleWhite,),
+                                      onPressed: (){},
                                     ),
-                                  ),
-                                ),
+
+
+                                  ]
+                              )
+                            ],
+                          ),
+
+                        );
+                      },
+                    ),
+                  )://                  model.branchesList.isNotEmpty
+                  Expanded(
+                    child: ListView.builder(
+                      padding: EdgeInsets.symmetric(vertical: 0),
+                      itemCount: model.companyList == null
+                          ? 0
+                          : model.filteredCompanyList.length,
+
+                      itemBuilder: (BuildContext context, int index) {
+                        return new  ListTile(
+
+                          title:  Column (
+
+                            children: [
+                              Text("${model.filteredCompanyList[index].name} - ${model.filteredCompanyList[index].branchName} ${model.filteredCompanyList[index].description}",style: textStyle,),
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Icon(Icons.location_on,color: Colors.grey,),
+                                    Text("${model.filteredCompanyList[index].location}",style: textStyle,),
+                                    Text("Shift: ${model.filteredCompanyList[index].shiftNumber}",style: textStyle,),
+                                    FlatButton(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                      ),
+                                      color: Colors.grey,
+                                      child: Text("Read More",style: textStyleWhite,),
+                                      onPressed: (){},
+                                    ),
+
+
+                                  ]
+                              )
+                            ],
+                          ),
+
+                        );
+                      },
+                    ),
+                  )
                 ],
               ),
             ),

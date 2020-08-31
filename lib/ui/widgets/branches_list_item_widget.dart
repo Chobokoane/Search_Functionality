@@ -1,5 +1,5 @@
 import 'package:filter/core/model/branches_model.dart';
-import 'package:filter/core/model/search_model.dart';
+import 'package:filter/core/model/company_model.dart';
 import 'package:filter/core/model/shifts_model.dart';
 
 import 'package:filter/core/shared/core_helpers.dart';

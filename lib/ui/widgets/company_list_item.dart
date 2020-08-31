@@ -1,4 +1,4 @@
-import 'package:filter/core/model/search_model.dart';
+import 'package:filter/core/model/company_model.dart';
 import 'package:filter/core/shared/core_helpers.dart';
 import 'package:filter/ui/shared/text_styles.dart';
 import 'package:filter/ui/shared/ui_helpers.dart';

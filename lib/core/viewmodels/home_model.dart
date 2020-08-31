@@ -1,7 +1,8 @@
 import 'package:filter/core/enums/viewstate.dart';
 import 'package:filter/core/model/branches_model.dart';
-import 'package:filter/core/model/search_model.dart';
+import 'package:filter/core/model/company_model.dart';
 import 'package:filter/core/model/category_model.dart';
+import 'package:filter/core/model/location_model.dart';
 import 'package:filter/core/model/shifts_model.dart';
 import 'package:filter/core/repositories/search_repo.dart';
 import '../../locator.dart';
@@ -22,6 +23,9 @@ class HomeModel extends BaseModel {
 
   List<ShiftsModel> shiftsList = [];
   List<ShiftsModel> filteredShiftsList = [];
+
+  List<LocationModel> locationList = [];
+  List<LocationModel> filteredLocationList = [];
   String searchTerm;
   String selectedCategory;
 
@@ -94,7 +98,28 @@ class HomeModel extends BaseModel {
     });
 
   }
-
+  Future getLocationList() async {
+    setState(ViewState.Busy);
+    errorMessage = null;
+    locationList = [];
+    filteredLocationList = [];
+    _searchRepo.getLocationList()
+        .then((location) {
+      if (location != null) {
+        this.locationList = location;
+        this.filteredLocationList = location;
+        if (location.isEmpty) {
+          errorMessage = "No Branches Found";
+        }
+      } else {
+        errorMessage = "Failed to load Branches";
+      }
+      setState(ViewState.Idle);
+    }).catchError((error) {
+      errorMessage = '${error.toString()}';
+      setState(ViewState.Idle);
+    });
+  }
 
   Future getCategories() async {
     setState(ViewState.Busy);
@@ -102,12 +127,12 @@ class HomeModel extends BaseModel {
     categoryList = [];
     _searchRepo.getCategoryList()
         .then((categories) {
-      //this.categoryList = [CategoryModel(name: "Company")];
       this.categoryList.addAll(categories);
       setState(ViewState.Idle);
        getShiftList();
       getCompanyList();
       getBranchesList();
+      getLocationList();
 
     }).catchError((error) {
       errorMessage = '${error.toString()}';
