@@ -20,7 +20,6 @@ class LocationListItemWidget extends StatelessWidget {
         RoundImageWidget(
           marginTop: 0,
           height: CoreHelpers.getDeviceType() == "IOS" && UIHelper.isLargeAspectRatio(aspectRatio) ? 45: 40,
-          path: "assets/images/search_icons/${location.searchIcon}.jpg",
         ),
         UIHelper.horizontalSpaceSmall(),
         Expanded(

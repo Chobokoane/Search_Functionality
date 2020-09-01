@@ -1,84 +1,49 @@
 [
   {
     "number": 1,
-    "name": "Cac",
-    "branchName": "Johannesburg",
-    "description": "Bookeeping making sure all the books are up to date",
     "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Brits"
   },
   {
     "number": 2,
-    "name": "Medicare Pharmacy",
-    "branchName": "Johannesburg",
-    "description": "Bookeeping making sure all the books are up to date",
     "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Bloemfontein"
   },
   {
     "number": 3,
-    "name": "Meloncino Restaurant",
-    "branchName": "Johannesburg",
-    "description": "Bookeeping making sure all the books are up to date",
     "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Eastern Cape"
+
   },
   {
     "number": 4,
-    "name": "Merrypak",
-    "branchName": "Johannesburg",
-    "description": "Bookeeping making sure all the books are up to date",
-    "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Johannesburg",
+    "category": "Location"
   },
   {
     "number": 5,
-    "name": "Mica Hardware Store",
     "category": "Location",
-    "branchName": "Johannesburg",
-    "description": "Bookeeping making sure all the books are up to date",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Johannesburg"
   },
   {
     "number": 6,
-    "name": "Mike's Kitchen",
-    "branchName": "Johannesburg",
-    "description": "Bookeeping making sure all the books are up to date",
     "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Eastern Cape"
   },
   {
     "number": 7,
-    "name": "M-Kem Pharmacy",
-    "branchName": "Pretoria",
-    "description": "Taking orders from different supplies ",
-    "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Pretoria",
+    "category": "Location"
   },
   {
     "number": 8,
-    "name": "Makro",
-    "branchName": "Bloemfontein",
-    "description": "Supervisor to oversee every general worker they are doing their job",
-    "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Bloemfontein",
+    "category": "Location"
   },
   {
     "number": 9,
-    "name": "Basadi",
-    "branchName": "Boksburg",
-    "description": "Fixing all the refrigerator from our clients",
-    "category": "Location",
-    "location": "Eastern Cape",
-    "shiftNumber": "72"
+    "location": "Boksburg",
+    "category": "Location"
   }
 
 ]

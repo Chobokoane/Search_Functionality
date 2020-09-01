@@ -12,7 +12,7 @@ class CategorySelectionWidget extends StatefulWidget {
       {Key key,
       this.categoryList,
       this.onSelection,
-      this.defaultValue = "Company"})
+      this.defaultValue = "Location"})
       : super(key: key);
 
   @override
@@ -46,6 +46,7 @@ class CategorySelectionState extends State<CategorySelectionWidget> {
           labelPadding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
           label: Container(
             //color: Colors.grey,
+
               width: 120,
               height: 30,
               child: Center(
@@ -55,8 +56,9 @@ class CategorySelectionState extends State<CategorySelectionWidget> {
                       currentValue == category.name ? textStyleWhite : textStyles,
                 ),
               )),
-         // backgroundColor: widgetBgColor,
-          selectedColor: textColorGrey,
+
+          backgroundColor: widgetBgColor,
+          selectedColor: widgetLightGreyColor,
           selected: currentValue == category.name,
           onSelected: (selected) {
             setState(() {
