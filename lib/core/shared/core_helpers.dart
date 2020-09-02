@@ -10,6 +10,7 @@ class CoreHelpers {
     initializeDateFormatting('en_ZA,', null);
   }
 
+
   static String getDeviceType() {
     if (Platform.isIOS) {
       return "IOS";
@@ -48,10 +49,12 @@ class CoreHelpers {
       String firstNameText,
       String lastNameText,
       String emailText,
-      String dobText,
       String nationalityText,
       String genderText,
       String passwordText,
+      String idNumber,
+      String registrationNumber,
+      String occupation,
       String verifyPasswordText) {
     String errorMessage;
     bool emailValid = RegExp(
@@ -64,8 +67,6 @@ class CoreHelpers {
       errorMessage = "Please Enter Your Last Name";
     } else if (emailText.isEmpty || !emailValid) {
       errorMessage = "Please Enter A Valid Email Address";
-    } else if (dobText.isEmpty) {
-      errorMessage = "Please select your date of birth";
     } else if (nationalityText.isEmpty) {
       errorMessage = "Please select your nationality";
     } else if (genderText.isEmpty) {

@@ -2,12 +2,8 @@ import 'package:filter/core/enums/viewstate.dart';
 import 'package:filter/core/viewmodels/home_model.dart';
 import 'package:filter/ui/shared/app_colors.dart';
 import 'package:filter/ui/shared/text_styles.dart';
-import 'package:filter/ui/widgets/branches_list_item_widget.dart';
-import 'package:filter/ui/widgets/location_list_item_widget.dart';
 import 'package:filter/ui/widgets/padded_divider_widget.dart';
 import 'package:filter/ui/widgets/search_filter_widget.dart';
-import 'package:filter/ui/widgets/search_list_item_widget.dart';
-import 'package:filter/ui/widgets/shifts_list_item_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -91,7 +87,7 @@ class HomeView extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Icon(Icons.location_on,color: Colors.grey,),
+                                            Icon(Icons.location_on,color: widgetGreyColor,),
 
                                             Padding(
                                               padding: const EdgeInsets.only(left:8),
@@ -104,7 +100,9 @@ class HomeView extends StatelessWidget {
                                             ),
                                              color: Colors.grey,
                                                 child: Text("Read More",style: textStyleWhite,),
-                                                onPressed: (){},
+                                                onPressed: (){
+                                                  Navigator.pushReplacementNamed(context, 'register');
+                                                },
                                               ),
 
 
@@ -141,7 +139,7 @@ class HomeView extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    FlatButton(git add .
+                                    FlatButton(
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(8.0),
                                       ),
