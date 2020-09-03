@@ -4,7 +4,9 @@ import 'package:filter/core/model/branches_model.dart';
 import 'package:filter/core/model/category_model.dart';
 import 'package:filter/core/model/company_model.dart';
 import 'package:filter/core/model/location_model.dart';
+import 'package:filter/core/model/qualifications_model.dart';
 import 'package:filter/core/model/shifts_model.dart';
+import 'package:filter/core/model/work_experience_model.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 
@@ -28,8 +30,8 @@ class SearchRepo {
     return (json.decode(categoryJson) as List).map((data) => CategoryModel.fromJson(data)).toList();
   }
   Future<List<BranchesModel>>  getBranchesList() async {
-    String categoryJson = await parseJsonFromAssets("assets/json/branches.json");
-    return (json.decode(categoryJson) as List).map((data) => BranchesModel.fromJson(data)).toList();
+    String branchesJson = await parseJsonFromAssets("assets/json/branches.json");
+    return (json.decode(branchesJson) as List).map((data) => BranchesModel.fromJson(data)).toList();
   }
   Future<List<ShiftsModel>>  getShiftsList() async {
     String shiftsJson = await parseJsonFromAssets("assets/json/shifts.json");
@@ -42,5 +44,13 @@ class SearchRepo {
   Future<List<LocationModel>>  getLocationList() async {
     String locationJson = await parseJsonFromAssets("assets/json/location.json");
     return (json.decode(locationJson) as List).map((data) => LocationModel.fromJson(data)).toList();
+  }
+  Future<List<QualificationsModel>>  getQualificationsList() async {
+    String qualificationsJson = await parseJsonFromAssets("assets/json/qualifications.json");
+    return (json.decode(qualificationsJson) as List).map((data) => QualificationsModel.fromJson(data)).toList();
+  }
+  Future<List<WorkExperienceModel>>  getWorkExperienceList() async {
+    String workExperienceJson = await parseJsonFromAssets("assets/json/workexperience.json");
+    return (json.decode(workExperienceJson) as List).map((data) => WorkExperienceModel.fromJson(data)).toList();
   }
 }

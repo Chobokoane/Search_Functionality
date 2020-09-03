@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../../locator.dart';
 import 'base_model.dart';
 
-class RegisterModel extends BaseModel {
+class RegisterViewModel extends BaseModel {
 //  final AuthenticationService _authenticationService =
 //  locator<AuthenticationService>();
 

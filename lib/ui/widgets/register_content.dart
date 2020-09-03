@@ -152,7 +152,7 @@ Row(
                     'Register',
                     style: titleStyleWhite,
                   ),
-                  onPressed: onClickSignUp),
+                  onPressed: (){ Navigator.pushReplacementNamed(context, 'qualifications');}),
             )),
         UIHelper.verticalSpaceLarge(),
       ],

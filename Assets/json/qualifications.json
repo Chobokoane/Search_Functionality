@@ -1,0 +1,34 @@
+[
+  {
+    "number": 1,
+    "title": "Bachelor of Science Information Technology",
+    "university": "University of Pretoria",
+    "year": "2006"
+
+  },
+  {
+    "number": 2,
+    "title": "Bachelor of Information Technology ",
+    "university": "University of Cape Town",
+    "year": "2007"
+  },
+  {
+    "number": 3,
+    "title": "National Diploma of Arts and Culture",
+    "university": " Central University of Technology",
+    "year": "2012"
+  },
+  {
+    "number": 4,
+    "title": "National Diploma in Financial Information System ",
+    "university": "Central University of Technology",
+    "year": "2011"
+  },
+  {
+    "number": 5,
+    "title": "National Diploma in Tourism",
+    "university": "University of Free State",
+    "year": "2017"
+  }
+
+]

@@ -81,6 +81,23 @@ class CoreHelpers {
 
     return errorMessage;
   }
+  static String validateQualificationDetails(
+      String nameText,
+      String institutionNameText,
+      String yearText,
+      ) {
+    String errorMessage;
+
+    if (nameText.isEmpty) {
+      errorMessage = "Please Enter Your Name";
+    } else if (institutionNameText.isEmpty) {
+      errorMessage = "Please Enter Your Institution Name";
+    } else if (yearText.isEmpty) {
+      errorMessage = "Please select your year";
+    }
+
+    return errorMessage;
+  }
 
   static String validateMobile(String value) {
     String pattern = r'(^(?:[+0]9)?[0-9]{10,12}$)';

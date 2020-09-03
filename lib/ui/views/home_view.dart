@@ -1,5 +1,5 @@
 import 'package:filter/core/enums/viewstate.dart';
-import 'package:filter/core/viewmodels/home_model.dart';
+import 'package:filter/core/viewmodels/home_viewmodel.dart';
 import 'package:filter/ui/shared/app_colors.dart';
 import 'package:filter/ui/shared/text_styles.dart';
 import 'package:filter/ui/widgets/padded_divider_widget.dart';
@@ -143,7 +143,7 @@ class HomeView extends StatelessWidget {
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(8.0),
                                       ),
-                                      color: Colors.white,
+                                      color: widgetBgColor,
                                       child: Text("Subscribe",style: greyText,),
                                       onPressed: (){},
                                     ),
