@@ -157,47 +157,6 @@ class HomeView extends StatelessWidget {
                       },
                     ),
                   ): Container(  ),
-                  //model.branchesList.isNotEmpty
-//                  Expanded(
-//                    child: ListView.builder(
-//                      padding: EdgeInsets.symmetric(vertical: 0),
-//                      itemCount: model.locationList == null
-//                          ? 0
-//                          : model.filteredLocationList.length,
-//
-//                      itemBuilder: (BuildContext context, int index) {
-//                        return Container(
-//                          color: widgetLightGreyColor,
-//
-//                          child: new  ListTile(
-//
-//                            title:  Column (
-//                              mainAxisAlignment: MainAxisAlignment.start,
-//                              crossAxisAlignment: CrossAxisAlignment.start,
-//                              children: [
-//                                Divider(),
-//                                Text("${model.filteredLocationList[index].location} ",style: styleBlack,),
-//                                Row(
-//                                  mainAxisAlignment: MainAxisAlignment.end,
-//                                  children: [
-//                                    FlatButton(
-//                                      shape: RoundedRectangleBorder(
-//                                        borderRadius: BorderRadius.circular(8.0),
-//                                      ),
-//                                      color: Colors.white,
-//                                      child: Text("Subscribe",style: greyText,),
-//                                      onPressed: (){},
-//                                    ),
-//                                  ],
-//                                )
-//                              ],
-//                            ),
-//
-//                          ),
-//                        );
-//                      },
-//                    ),
-//                  )
                 ],
               ),
             ),

@@ -98,10 +98,7 @@ class WorkExperienceView extends StatelessWidget {
                           color: widgetGreyColor,
                           child: Text("Skip",style: greyText,),
                           onPressed: (){
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => UploadingDocuments()),
-                            );
+                            Navigator.pushReplacementNamed(context, 'document');
                           },
                         ),
                       ),

@@ -23,6 +23,8 @@ class My_Router {
         return MaterialPageRoute(builder: (_) =>WorkExperienceView());
       case "addWorkExperience":
         return MaterialPageRoute(builder: (_) =>AddWorkExperienceView());
+      case "document":
+        return MaterialPageRoute(builder: (_) =>AddWorkExperienceView());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
