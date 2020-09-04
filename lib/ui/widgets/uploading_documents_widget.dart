@@ -2,10 +2,45 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:filter/ui/shared/app_colors.dart';
+import 'package:filter/ui/shared/text_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-class UploadingDocuments extends StatelessWidget {
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
+
+class UploadingDocuments extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+class _MyHomePageState extends State<UploadingDocuments> {
   //File file = await FilePicker.getFile();
+
+  String _filePath;
+
+  void getFilePath() async {
+    try {
+      String filePath = await FilePicker.getFilePath(type: FileType.any);
+      if (filePath == '') {
+        return;
+      }
+      print("File path: " + filePath);
+      setState((){this._filePath = filePath;});
+    } on PlatformException catch (e) {
+      print("Error while picking the file: " + e.toString());
+    }
+  }
+
+
+  File _image;
+  final picker = ImagePicker();
+
+  Future getImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.camera);
+
+    setState(() {
+      _image = File(pickedFile.path);
+    });
+  }
   @override
   Widget build(BuildContext context) {
     double aspectRatio = MediaQuery
@@ -21,16 +56,44 @@ class UploadingDocuments extends StatelessWidget {
         backgroundColor: widgetLightGreyColor,
         centerTitle: true,
         iconTheme: IconThemeData(
-          color: widgetGreyColor, //change your color here
+          color: widgetGreyColor, //change your color hereacrd flutte
         ),
         title: Text(
-          "Qualifications",
+          "Documents",
           style: TextStyle(color: textColorWhite),
         ),
       ),
       body: Column(
         children: [
-          Card()
+      InkWell(
+        child: Card(
+        child: Column(
+        mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              title: Text('Upload CV',style: textStyle,),
+              subtitle: Text('Select File'),
+            ),
+          ],
+        ),
+        ),
+        onTap: getImage,
+
+      ),
+      InkWell(
+        child: Card(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              const ListTile(
+                title: Text('Upload Photo',style: textStyle,),
+                subtitle: Text('Select File'),
+              ),
+            ],
+          ),
+        ),
+        onTap: getFilePath,
+      ),
         ],
       ),
     );

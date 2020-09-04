@@ -6,6 +6,7 @@ import 'package:filter/ui/shared/app_colors.dart';
 import 'package:filter/ui/shared/text_styles.dart';
 import 'package:filter/ui/widgets/padded_divider_widget.dart';
 import 'package:filter/ui/widgets/search_filter_widget.dart';
+import 'package:filter/ui/widgets/uploading_documents_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -97,7 +98,10 @@ class WorkExperienceView extends StatelessWidget {
                           color: widgetGreyColor,
                           child: Text("Skip",style: greyText,),
                           onPressed: (){
-
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => UploadingDocuments()),
+                            );
                           },
                         ),
                       ),
