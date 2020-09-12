@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:filter/core/model/branches_model.dart';
 import 'package:filter/core/model/category_model.dart';
 import 'package:filter/core/model/company_model.dart';
+import 'package:filter/core/model/employees_category.dart';
+import 'package:filter/core/model/employees_details_model.dart';
 import 'package:filter/core/model/location_model.dart';
 import 'package:filter/core/model/qualifications_model.dart';
 import 'package:filter/core/model/shifts_model.dart';
@@ -29,6 +31,10 @@ class SearchRepo {
     String categoryJson = await parseJsonFromAssets("assets/json/category.json");
     return (json.decode(categoryJson) as List).map((data) => CategoryModel.fromJson(data)).toList();
   }
+  Future<List<EmployeesCategoryModel>>  getEmployeesCategoryList() async {
+    String employeesCategoryJson = await parseJsonFromAssets("assets/json/employeescategory.json");
+    return (json.decode(employeesCategoryJson) as List).map((data) => EmployeesCategoryModel.fromJson(data)).toList();
+  }
   Future<List<BranchesModel>>  getBranchesList() async {
     String branchesJson = await parseJsonFromAssets("assets/json/branches.json");
     return (json.decode(branchesJson) as List).map((data) => BranchesModel.fromJson(data)).toList();
@@ -52,5 +58,9 @@ class SearchRepo {
   Future<List<WorkExperienceModel>>  getWorkExperienceList() async {
     String workExperienceJson = await parseJsonFromAssets("assets/json/workexperience.json");
     return (json.decode(workExperienceJson) as List).map((data) => WorkExperienceModel.fromJson(data)).toList();
+  }
+  Future<List<EmployeesDetailsModel>>  getEmployeesDetailsList() async {
+    String employeesDetails = await parseJsonFromAssets("assets/json/employeedetails.json");
+    return (json.decode(employeesDetails) as List).map((data) => EmployeesDetailsModel.fromJson(data)).toList();
   }
 }

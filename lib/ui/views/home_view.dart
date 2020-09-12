@@ -62,56 +62,59 @@ class HomeView extends StatelessWidget {
                                 : model.filteredCompanyList.length,
 
                             itemBuilder: (BuildContext context, int index) {
-                             return Card(
-                               color: widgetLightGreyColor,
-                               child: new  ListTile(
+                             return InkWell(
+                               child: Card(
+                                 color: widgetLightGreyColor,
+                                 child: new  ListTile(
 
-                                  title:  Column (
-                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
+                                    title:  Column (
+                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
 
-                                  RichText(
-                                  text: TextSpan(
-                                  text: '${model.filteredCompanyList[index].name} - ',
-                                    style: TextStyle(fontSize: 18,color:textColorGrey),
-                                    children: <TextSpan>[
-                                      TextSpan(
-                                        text: '${model.filteredCompanyList[index].branchName}',
-                                        style: TextStyle(fontSize: 18,color:textColorGrey ),
-                                      ),
-                                      TextSpan(text: ' ${model.filteredCompanyList[index].description}',style: textStyle),
-                                    ],
+                                    RichText(
+                                    text: TextSpan(
+                                    text: '${model.filteredCompanyList[index].name} - ',
+                                      style: TextStyle(fontSize: 18,color:textColorGrey),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: '${model.filteredCompanyList[index].branchName}',
+                                          style: TextStyle(fontSize: 18,color:textColorGrey ),
+                                        ),
+                                        TextSpan(text: ' ${model.filteredCompanyList[index].description}',style: textStyle),
+                                      ],
+                                    ),
+                                 ),
+                                       // Text("${model.filteredCompanyList[index].name} - ${model.filteredCompanyList[index].branchName} ${model.filteredCompanyList[index].description}",style: textStyle,),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Icon(Icons.location_on,color: widgetGreyColor,),
+
+                                              Padding(
+                                                padding: const EdgeInsets.only(left:8),
+                                                child: Text("${model.filteredCompanyList[index].location}",style: textStyle,),
+                                              ),
+                                              Text("Shift: ${model.filteredCompanyList[index].shiftNumber}",style: textStyle,),
+                                             FlatButton(
+                                                 shape: RoundedRectangleBorder(
+                                                    borderRadius: BorderRadius.circular(12.0),
+                                              ),
+                                               color: Colors.grey,
+                                                  child: Text("Read More",style: textStyleWhite,),
+                                                  onPressed: (){
+                                                    Navigator.pushReplacementNamed(context, 'register');
+                                                  },
+                                                ),
+                                            ]
+                                        )
+                                      ],
+                                    ),
+
                                   ),
                                ),
-                                     // Text("${model.filteredCompanyList[index].name} - ${model.filteredCompanyList[index].branchName} ${model.filteredCompanyList[index].description}",style: textStyle,),
-                                      Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Icon(Icons.location_on,color: widgetGreyColor,),
-
-                                            Padding(
-                                              padding: const EdgeInsets.only(left:8),
-                                              child: Text("${model.filteredCompanyList[index].location}",style: textStyle,),
-                                            ),
-                                            Text("Shift: ${model.filteredCompanyList[index].shiftNumber}",style: textStyle,),
-                                           FlatButton(
-                                               shape: RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.circular(12.0),
-                                            ),
-                                             color: Colors.grey,
-                                                child: Text("Read More",style: textStyleWhite,),
-                                                onPressed: (){
-                                                  Navigator.pushReplacementNamed(context, 'register');
-                                                },
-                                              ),
-
-
-                                          ]
-                                      )
-                                    ],
-                                  ),
-
-                                ),
+                               onTap: (){
+                                 Navigator.pushReplacementNamed(context, 'employeesDetails');
+                               },
                              );
                             },
                           ),
