@@ -64,7 +64,7 @@ class HomeView extends StatelessWidget {
                             itemBuilder: (BuildContext context, int index) {
                              return InkWell(
                                child: Card(
-                                 color: widgetLightGreyColor,
+                                 color: widgetLightGreyColor1,
                                  child: new  ListTile(
 
                                     title:  Column (
@@ -129,7 +129,7 @@ class HomeView extends StatelessWidget {
 
                       itemBuilder: (BuildContext context, int index) {
                         return Card(
-                          color: widgetLightGreyColor,
+                          color: widgetLightGreyColor1,
 
                           child: new  ListTile(
 

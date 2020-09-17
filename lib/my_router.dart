@@ -1,5 +1,6 @@
 import 'package:filter/ui/views/add_qualification_view.dart';
 import 'package:filter/ui/views/add_work_experience_view.dart';
+import 'package:filter/ui/views/branches_view.dart';
 import 'package:filter/ui/views/employees_details_view.dart';
 import 'package:filter/ui/views/home_view.dart';
 import 'package:filter/ui/views/qualifications_view.dart';
@@ -28,6 +29,8 @@ class My_Router {
         return MaterialPageRoute(builder: (_) =>AddWorkExperienceView());
       case "employeesDetails":
         return MaterialPageRoute(builder: (_) =>EmployeesDetailsView());
+      case "branches":
+        return MaterialPageRoute(builder: (_) =>BranchesView());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
