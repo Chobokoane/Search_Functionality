@@ -115,15 +115,11 @@ class EmployeesDetailsView extends StatelessWidget {
                       ],
                     ),
                   ),
-
-                  // the tab bar with two items
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 250),
-                      child: Expanded(
+                 Expanded(
                         child: TabBar(
                             isScrollable: true,
                             controller: _tabController,
-                            indicatorColor: secondaryColor,
+                            indicatorColor: textColorGrey,
                             indicatorWeight: 5,
                             labelColor: Colors.black,
                             indicatorSize: TabBarIndicatorSize.tab,
@@ -149,12 +145,12 @@ class EmployeesDetailsView extends StatelessWidget {
                             ]
                   ),
                       ),
-                    ),
+
                   Expanded(
+                    flex: 7,
                     child: TabBarView(
                       children: [
                         Container(
-
                             color: Colors.white,
                          ),
                         Container(
@@ -176,20 +172,15 @@ class EmployeesDetailsView extends StatelessWidget {
                                             children: [
 
                                               Row(
-                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.start,
                                                   children: [
-                                                    Icon(Icons.location_on,color: widgetGreyColor,size: 20,),
+                                                    Icon(Icons.location_on,color: widgetGreyColor,size: 45,),
 
 
-                                                    Text("${model.filteredEmployeesDetailsList[index].street}\n\n"
+                                                    Text("${model.filteredEmployeesDetailsList[index].street}\n"
                                                         "${model.filteredEmployeesDetailsList[index].city}, ${model.filteredEmployeesDetailsList[index].code}",style: textStyle,),
-
                                                     Text("",style: textStyle,),
-                                                    Container(
-                                                      height: 20,
-                                                      width: 20,
-                                                      child: FlatButton(
-
+                                                   FlatButton(
                                                         shape: RoundedRectangleBorder(
                                                           borderRadius: BorderRadius.circular(12.0),
                                                         ),
@@ -198,7 +189,7 @@ class EmployeesDetailsView extends StatelessWidget {
                                                         onPressed: (){
                                                         },
                                                       ),
-                                                    ),
+
                                                   ]
                                               )
                                             ],

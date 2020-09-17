@@ -67,7 +67,7 @@ class _MyHomePageState extends State<DocumentsView> {
         children: [
           InkWell(
             child: Card(
-              color: widgetLightGreyColor,
+              color: widgetLightGreyColor1,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<DocumentsView> {
           ),
           InkWell(
             child: Card(
-              color: widgetLightGreyColor,
+              color: widgetLightGreyColor1,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[

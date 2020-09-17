@@ -56,7 +56,7 @@ class AddWorkExperienceWidget extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0),
           ),
-          color: widgetGreyColor,
+          color: widgetLightGreyColor1,
           child: Text("Save",style: greyText,),
           onPressed: (){
 

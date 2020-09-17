@@ -52,7 +52,7 @@ class WorkExperienceView extends StatelessWidget {
                                 : model.filteredWorkExperienceList.length,
                             itemBuilder: (BuildContext context, int index) {
                               return Card(
-                                color: widgetLightGreyColor,
+                                color: widgetLightGreyColor1,
                                 child: new ListTile(
                                   title: Column(
                                     mainAxisAlignment:
@@ -83,7 +83,7 @@ class WorkExperienceView extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        color: widgetGreyColor,
+                        color: widgetLightGreyColor1,
                         child: Text("Add Work Experince",style: greyText,),
                         onPressed: () {
                           Navigator.pushReplacementNamed(context, 'addWorkExperience');
@@ -95,7 +95,7 @@ class WorkExperienceView extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          color: widgetGreyColor,
+                          color: widgetLightGreyColor1,
                           child: Text("Skip",style: greyText,),
                           onPressed: (){
                             Navigator.pushReplacementNamed(context, 'document');

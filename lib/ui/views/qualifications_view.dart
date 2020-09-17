@@ -50,7 +50,7 @@ class QualificationsView extends StatelessWidget {
                                 : model.filteredQualificationList.length,
                             itemBuilder: (BuildContext context, int index) {
                               return Card(
-                                color: widgetLightGreyColor,
+                                color: widgetLightGreyColor1,
                                 child: new ListTile(
                                   title: Column(
                                     mainAxisAlignment:
@@ -81,7 +81,7 @@ class QualificationsView extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
-                        color: widgetGreyColor,
+                        color: widgetLightGreyColor1,
                         child: Text("Add Qualification",style: greyText,),
                         onPressed: (){
                           Navigator.pushReplacementNamed(context, 'addQualifications');
@@ -93,7 +93,7 @@ class QualificationsView extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          color: widgetGreyColor,
+                          color: widgetLightGreyColor1,
                           child: Text("Skip",style: greyText,),
                           onPressed: (){
                             Navigator.pushReplacementNamed(context, 'workExperience');
